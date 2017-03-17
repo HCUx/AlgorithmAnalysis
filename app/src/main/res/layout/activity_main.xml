@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="hcu.algorithmanalysis.MainActivity">
+
+    <Spinner
+        android:id="@+id/ArraySizeSpinner"
+        android:layout_width="134dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:id="@+id/ArraySortingTypeSpinner"
+        android:layout_width="212dp"
+        android:layout_height="49dp"
+        android:layout_above="@+id/SortStartButton"
+        android:layout_toRightOf="@+id/ArraySizeSpinner"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:id="@+id/SortStartButton"
+        android:layout_width="358dp"
+        android:layout_height="48dp"
+        android:text="Test Yap"
+        android:layout_below="@+id/ArraySizeSpinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/SortStartButton"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp">
+    </com.github.mikephil.charting.charts.BarChart>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/displayProgress"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

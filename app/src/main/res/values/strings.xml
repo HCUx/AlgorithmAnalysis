@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Algorithm Analysis</string>
+
+    <string-array name="input_size">
+        <item>10000</item>
+        <item>20000</item>
+        <item>30000</item>
+    </string-array>
+
+    <string-array name="array_setting">
+        <item>Rastgele</item>
+        <item>Düz</item>
+        <item>Ters</item>
+    </string-array>
+</resources>
