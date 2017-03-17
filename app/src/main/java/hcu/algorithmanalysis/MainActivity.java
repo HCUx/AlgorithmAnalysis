@@ -29,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         mChart = (BarChart) findViewById(R.id.chart);
+        mChart.setNoDataText("Test Verisi Bulunamadı");
         mProgressBar = (ProgressBar) findViewById(R.id.displayProgress);
         mProgressBar.setVisibility(View.INVISIBLE);
         mChartUtil = new MyChart();
@@ -42,14 +44,14 @@ public class MainActivity extends AppCompatActivity {
         // Set up input size spinner
         mSizeSpinner = (Spinner) findViewById(R.id.ArraySizeSpinner);
         ArrayAdapter<CharSequence> sizeAdapter = ArrayAdapter.createFromResource(this.getApplication(), R.array.input_size, R.layout.spinner_item);
-        sizeAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        sizeAdapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
         mSizeSpinner.setAdapter(sizeAdapter);
         mSizeSpinner.setVisibility(View.VISIBLE);
 
         // set up array setting spinner
         mArraySettingSpinner = (Spinner) findViewById(R.id.ArraySortingTypeSpinner);
         ArrayAdapter<CharSequence> arraySettingAdapter = ArrayAdapter.createFromResource(this.getApplication(), R.array.array_setting, R.layout.spinner_item);
-        arraySettingAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        arraySettingAdapter.setDropDownViewResource(android.R.layout.simple_list_item_1);
         mArraySettingSpinner.setAdapter(arraySettingAdapter);
         mArraySettingSpinner.setVisibility(View.VISIBLE);
     }

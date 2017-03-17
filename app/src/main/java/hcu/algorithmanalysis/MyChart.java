@@ -46,7 +46,7 @@ public class MyChart {
         sortTimeEntries.add(new BarEntry(sortTimeUtil.selectionSortTime(Arrays.copyOf(array, array.length)), 3));
         sortTimeEntries.add(new BarEntry(sortTimeUtil.quickSortTime(Arrays.copyOf(array, array.length)), 4));
 
-        BarDataSet sortTimeDataSet = new BarDataSet(sortTimeEntries, "Algorithms");
+        BarDataSet sortTimeDataSet = new BarDataSet(sortTimeEntries, "Algoritmalar");
 
         sortTimeDataSet.setBarSpacePercent(10f);
 
@@ -82,7 +82,7 @@ public class MyChart {
 
     public void display(BarChart chart, List<IBarDataSet> dataSets, String[] labels) {
         BarData data = new BarData(labels, dataSets);
-        data.setValueTextSize(10f);
+        data.setValueTextSize(15f);
 
         chart.setData(data);
         setChartLegend(chart);
@@ -105,7 +105,7 @@ public class MyChart {
 
     private void setChartAxis(BarChart chart) {
         XAxis xAxis = chart.getXAxis();
-        xAxis.setTextSize(8f); // top labels
+        xAxis.setTextSize(10f); // top labels
         xAxis.setLabelsToSkip(0);// number of labels to skip
         xAxis.setSpaceBetweenLabels(0); // space in characters
         chart.setDescription("");
@@ -126,12 +126,12 @@ public class MyChart {
     private void setChartLegend(BarChart chart) {
         Legend legend = chart.getLegend();
         legend.setForm(Legend.LegendForm.SQUARE);
-        legend.setFormSize(10f);
+        legend.setFormSize(15f);
         legend.setTextSize(12f);
         legend.setFormToTextSpace(5f);
         legend.setXEntrySpace(20f);
         legend.setPosition(Legend.LegendPosition.BELOW_CHART_LEFT);
-        legend.setExtra(new int[]{Color.BLACK}, new String[]{"Unit - Microseconds"});
+        legend.setExtra(new int[]{Color.BLACK}, new String[]{"Birim : Mikrosaniye"});
     }
 
     /**
